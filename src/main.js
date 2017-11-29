@@ -3,8 +3,8 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import VueResource from 'vue-resource'
-import './common/scss/index.css'
+import VueResource from 'vue-resource';
+// import './common/scss/index.scss';
 
 Vue.use(VueResource)
 Vue.config.productionTip = false

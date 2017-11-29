@@ -57,6 +57,7 @@ export default {
 <style lang="scss">
 // @import "./common/scss/mixin.scss";
 @import "./common/scss/index.scss";
+
 #app {
     .tab{
       display: flex;

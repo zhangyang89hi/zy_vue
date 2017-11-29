@@ -18,8 +18,8 @@
               </div>
           </div>
           <div v-if="seller.supports" class="support-count">
-              <span class="count">{{seller.support.length}}</span>
-              <i class="icon-keyboard_arrow_right"></i>
+              <span class="count">{{seller.supports.length}}个</span>
+              <i class="icon-thumb_up"></i>
           </div>
       </div>
       <div class="bulletin-wrapper"></div>
@@ -41,10 +41,13 @@
 
 <style lang="scss">
 @import "../../common/scss/mixin.scss";
+@import "../../common/scss/icon.scss";
     .header{
         color: #fff;
-        background: #000;
+        background: rgba(7, 17, 27, 0.5);
+        // background: rgb(0, 0, 0);
         .content-wrapper{
+            position: relative;
             padding: 24px 12px 18px 24px;
             .avatar{
                 display: inline-block;
@@ -111,8 +114,26 @@
                     }
                 }
             }
-            .support{
-                color: red;
+            .support-count{
+                position: absolute;
+                right: 12px;
+                bottom: 14px;
+                padding: 0 8px;
+                height:24px;
+                line-height: 24px;
+                border-radius:14px;
+                background: rgba(0,0,0,0.2);
+                text-align: center;
+                .count{
+                    vertical-align:top;
+                    font-size: 10px;
+                }
+                .icon-keyboard_arrow_right{
+                    margin-left: 2px;
+                    line-height: 24px;
+                    font-size: 10px;
+
+                }
             }
         }
     }

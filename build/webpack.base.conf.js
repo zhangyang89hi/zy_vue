@@ -23,6 +23,8 @@ module.exports = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
+      'src': path.resolve(__dirname, '../src'),
+      'common': path.resolve(__dirname, '../src/common'),
       '@': resolve('src'),
     }
   },
@@ -32,11 +34,6 @@ module.exports = {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: vueLoaderConfig
-      },
-      {
-        test:/\.(scss|sass)$/,
-        loaders:['style','css','sass']
-        // loader: ExtractTextPlugin.extract('style', 'css!sass')
       },
       {
         test: /\.js$/,
@@ -60,11 +57,11 @@ module.exports = {
         }
       },
       {
-        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        test: /\.(woff2?|woff|eot|svg|ttf|otf)(\?.*)?$/,
         loader: 'url-loader',
         options: {
           limit: 10000,
-          name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
+          name: '../src/common/fonts/[name].[hash:7].[ext]'
         }
       }
     ]
