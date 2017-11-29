@@ -112,7 +112,7 @@
                 }
             }
             .support{
-                
+                color: red;
             }
         }
     }
